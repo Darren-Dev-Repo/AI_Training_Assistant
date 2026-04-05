@@ -1,0 +1,6 @@
+# 隱藏虛擬環境與快取
+venv/
+__pycache__/
+
+# 隱藏API Key與機密資訊
+.env

@@ -1,0 +1,17 @@
+{
+    "_comment": "This format records current state of the trainer.",
+
+    "user_id": "U854162",
+    "current_program": "StrongLifts_5x5",
+
+    "program_state": {
+        "next_workout_type": "A",
+        "consecutive_workouts_completed": 12
+    },
+
+    "lifts_status": {
+        "barbell_squat": {"current_weight_kg": 60, "consecutive_fails": 0},
+        "bench_press": {"current_weight_kg": 40, "consecutive_fails": 1},
+        "barbell_row": {"current_weight_kg": 45, "consecutive_fails": 0}
+    }
+}
