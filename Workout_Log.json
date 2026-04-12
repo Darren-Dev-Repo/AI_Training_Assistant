@@ -8,7 +8,7 @@
         "unavailable_equipment": ["dumbbells", "cable_machine", "trapbar"],
         "exhausted_or_injured_body_parts": ["shoulder"],
         "available_time_in_minutes": 40,
-        "skipped_exercise": ["bench_press"]
+        "skipped_exercise": ["bench_press", "barbell_squat"]
     },
 
     "performed_exercises": [
