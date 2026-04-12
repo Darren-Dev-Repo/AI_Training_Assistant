@@ -13,7 +13,7 @@ This project aims to build an **Agentic Training Assistant** that parses natural
 * **State Preservation:** Implements a "State Freeze" mechanism to protect core lifting progression when temporary substitute exercises are performed.
 
 ## 📅 Project Roadmap (9-Week Agile Sprint)
-- [v] **Week 1:** Defined Core DB Schema (`Current State` & `Workout Logs`) and Zero-Shot Extraction Prompts.
-- [v] **Week 2:** Decision Logic Design & Next Training Generator Prompt.
+- [x] **Week 1:** Defined Core DB Schema (`Current State` & `Workout Logs`) and Zero-Shot Extraction Prompts.
+- [x] **Week 2:** Decision Logic Design & Next Training Generator Prompt.
 - [ ] **Week 3:** Decision Logic & State Freeze Implementation.
 - [ ] **Week 4-9:** *To be updated...*
