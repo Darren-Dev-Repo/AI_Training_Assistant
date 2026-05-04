@@ -1,0 +1,29 @@
+{
+  "type": "function",
+  "function": {
+    "name": "deload",
+    "description": "使用者未完成預計重量，挑戰失敗時，使用此工具計算下一次的訓練重量。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "currentWeightKg": {
+          "type": "number",
+          "description": "使用者今天完成的重量，單位為公斤 (kg)。"
+        },
+        "minWeightChangeInKg": {
+          "type": "number",
+          "description": "要增加的重量，通常是 2.5 kg。"
+        },
+        "deloadPercentage": {
+          "type": "number",
+          "description": "降低重量的比率。"
+        }
+      },
+      "required": [
+        "currentWeightKg",
+        "minWeightChangeInKg",
+        "deloadPercentage"
+      ]
+    }
+  }
+}

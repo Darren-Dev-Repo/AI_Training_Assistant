@@ -1,0 +1,27 @@
+{
+  "name": "ai_training_assistant",
+  "version": "1.0.0",
+  "description": "> A dynamic, LLM-powered workout companion for busy beginners.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Darren-Dev-Repo/AI_Training_Assistant.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Darren-Dev-Repo/AI_Training_Assistant/issues"
+  },
+  "homepage": "https://github.com/Darren-Dev-Repo/AI_Training_Assistant#readme",
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3"
+  }
+}
