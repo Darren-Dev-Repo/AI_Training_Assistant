@@ -14,6 +14,7 @@ This project aims to build an **Agentic Training Assistant** that parses natural
 
 ## 📅 Project Roadmap (9-Week Agile Sprint)
 - [x] **Week 1:** Defined Core DB Schema (`Current State` & `Workout Logs`) and Zero-Shot Extraction Prompts.
-- [x] **Week 2:** Decision Logic Design & Next Training Generator Prompt.
-- [ ] **Week 3:** Decision Logic & State Freeze Implementation.
-- [ ] **Week 4-9:** *To be updated...*
+- [x] **Week 2-3:** Decision Logic Design & Next Training Generator Prompt.
+- [x] **Week 4-5:** Tool Implementation & Function Definitions.
+- [ ] **Week 6:** Function Calling API Implementation.
+- [ ] **Week 7-9:** *To be updated...*
