@@ -19,9 +19,14 @@
   },
   "homepage": "https://github.com/Darren-Dev-Repo/AI_Training_Assistant#readme",
   "devDependencies": {
-    "@types/node": "^25.6.0",
+    "@types/node": "^25.6.2",
     "ts-node": "^10.9.2",
     "tsx": "^4.21.0",
     "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.4.2",
+    "openai": "^6.37.0"
   }
 }
