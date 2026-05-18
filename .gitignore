@@ -11,3 +11,4 @@ node_modules/
 # 測試檔
 readFileTest.ts
 modelListTest.ts
+Current_State_copy.json

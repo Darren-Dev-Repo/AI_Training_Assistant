@@ -17,6 +17,6 @@ This project aims to build an **Agentic Training Assistant** that parses natural
 - [x] **Week 2-3:** Decision Logic Design & Next Training Generator Prompt.
 - [x] **Week 4-5:** Tool Implementation & Function Definitions.
 - [X] **Week 6:** Dynamic Prompting Implementation and First Genimi API Connection.
-- [ ] **Week 7:** State & Guardrails.
-- [ ] **Week 8:** Knowledge Query Implementation.
+- [X] **Week 7:** State & Guardrails.
+- [X] **Week 8:** Knowledge Query Implementation.
 - [ ] **Week 9:** Deployment.

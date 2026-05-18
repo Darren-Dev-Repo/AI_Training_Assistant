@@ -10,7 +10,7 @@
 
 ### Day B (B 日)
 - **Barbell Squat (槓鈴深蹲)**: 5 組 x 5 下
-- **Barbell Overhead Press (槓鈴肩推)**: 5 組 x 5 下
+- **Barbell Overhead Press / Standing Military Press (槓鈴肩推)**: 5 組 x 5 下
 - **Barbell Deadlift (槓鈴硬舉)**: 1 組 x 5 下 (注意：硬舉只需執行 1 組)
 
 ## 核心執行規則 (Rules)
