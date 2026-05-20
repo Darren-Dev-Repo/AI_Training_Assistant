@@ -12,3 +12,6 @@ node_modules/
 readFileTest.ts
 modelListTest.ts
 Current_State_copy.json
+
+# 系統文件
+reportDocument.md
