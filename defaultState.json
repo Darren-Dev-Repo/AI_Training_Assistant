@@ -1,0 +1,10 @@
+{
+    "current_workout_type": "A",
+    "lifts_status": {
+        "barbell_squat": { "current_weight_kg": 20, "consecutive_fails": 0 },
+        "bench_press": { "current_weight_kg": 20, "consecutive_fails": 0 },
+        "barbell_row": { "current_weight_kg": 20, "consecutive_fails": 0 },
+        "overhead_press": { "current_weight_kg": 20, "consecutive_fails": 0 },
+        "deadlift": { "current_weight_kg": 40, "consecutive_fails": 0 }
+    }
+}

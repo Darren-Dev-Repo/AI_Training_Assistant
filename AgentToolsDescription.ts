@@ -9,7 +9,7 @@ export const agentTools = [
         properties: {
           exerciseName: {
               type: "string",
-              description: "使用者執行的動作名稱，必須完全符合 Current_State.json 中的 key (例如: barbell_squat, bench_press 等)。"
+              description: "使用者執行的動作名稱，必須完全符合 currentState.json 中的 key (例如: barbell_squat, bench_press 等)。"
           },
           reasoning: { 
             type: "string", 
@@ -62,7 +62,7 @@ export const agentTools = [
         properties: {
           exerciseName: {
               type: "string",
-              description: "使用者執行的動作名稱，必須完全符合 Current_State.json 中的 key (例如: barbell_squat, bench_press 等)。"
+              description: "使用者執行的動作名稱，必須完全符合 currentState.json 中的 key (例如: barbell_squat, bench_press 等)。"
           },
           reasoning: { 
             type: "string", 
@@ -95,7 +95,7 @@ export const agentTools = [
         properties: {
           exerciseName: {
             type: "string",
-            description: "使用者執行的動作名稱，必須完全符合 Current_State.json 中的 key。"
+            description: "使用者執行的動作名稱，必須完全符合 currentState.json 中的 key。"
           },
           reasoning: { 
             type: "string", 

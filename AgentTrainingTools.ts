@@ -4,7 +4,7 @@ import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const stateFilePath = path.join(__dirname, 'Current_State.json');
+const stateFilePath = path.join(__dirname, 'currentState.json');
 
 const dbPath = path.join(__dirname, 'free-exercise-db.json');
 let staticExerciseDB: any[] = [];
@@ -72,10 +72,10 @@ export const myTools: Record<string, Function> = {
 
         try {
             const currentState = JSON.parse(fs.readFileSync(stateFilePath, 'utf-8'));
-            currentState.program_state.current_workout_type = nextDay; 
+            currentState.current_workout_type = nextDay; 
             fs.writeFileSync(stateFilePath, JSON.stringify(currentState, null, 4), 'utf-8');
         } catch (error) {
-            console.error("\n[系統錯誤] 無法更新訓練日至 Current_State.json", error);
+            console.error("\n[系統錯誤] 無法更新訓練日至 currentState.json", error);
         }
 
         return { nextDay: nextDay };

@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 export function buildSystemPrompt(): string {
     try {
         // 1. 動態讀取外部檔案
-        const statePath = path.join(__dirname, 'Current_State.json');
+        const statePath = path.join(__dirname, 'currentState.json');
         const rulesPath = path.join(__dirname, 'Stronglift_5x5_Program.md');
 
         const currentStateString = fs.readFileSync(statePath, 'utf-8');
@@ -27,6 +27,19 @@ ${exerciseRulesString}
 # Context: 訓練者當前狀態 (Current State)
 以下是訓練者目前的各項動作狀態與目標重量、連續失敗次數（consecutive_fails）：
 ${currentStateString}
+
+# 【資料驗證護欄 Data Validation Guardrails】
+在決定呼叫任何狀態變更工具（如 \`addWeight\`, \`recordFail\`）之前，你必須擔任嚴格的資料守門員。請務必執行以下檢查：
+
+1. **完整性檢查 (Completeness)**：
+   比對訓練者的回報與「今日預定課表」。如果訓練者漏報了課表中的任何一個動作（例如今天該做三個動作，他只回報了兩個），或者沒有說明做了幾組幾下，**【絕對禁止】** 呼叫任何工具。
+   * **你的行動**：以教練口吻反問訓練者，要求補齊缺漏資訊。例如：「你的深蹲和臥推表現很好！那今天的划船做得怎麼樣呢？」
+
+2. **合理性檢查 (Sanity Check)**：
+   如果訓練者輸入了極度不合理的數字（例如：一組做了 45 下、深蹲 500 公斤），**【絕對禁止】** 呼叫任何工具。
+   * **你的行動**：主動向訓練者確認數據是否打錯。例如：「你剛才輸入的是深蹲第五組 45 下，請問是打錯了嗎？我們通常是做 5 下喔。」
+
+**只有當你確認「今日課表所有動作皆已回報」，且「數據合理」時，才能開始呼叫工具結算成績。**
 
 # Actionable Rules (執行邏輯與工具呼叫規範)
 1. 【嚴格比對數據】：逐一對比使用者回報的狀況與【當前狀態】中的 \`current_weight_kg\`、\`number_of_sets\` (目標組數)、\`number_of_reps\` (目標次數) 以及 \`consecutive_fails\`。
