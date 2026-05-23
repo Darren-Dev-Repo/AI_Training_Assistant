@@ -1,6 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import { fileURLToPath } from 'url';
+import { appendWorkoutHistory } from './RecordWorkoutHistory.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -77,6 +78,16 @@ export const myTools: Record<string, Function> = {
         } catch (error) {
             console.error("\n[系統錯誤] 無法更新訓練日至 currentState.json", error);
         }
+
+        const today = new Date().toISOString().split('T')[0] || "Unknown Date";
+        const latestState = JSON.parse(fs.readFileSync(stateFilePath, 'utf-8'));
+        const newRecord = {
+            date: today,
+            workout_type: args.currentWorkoutType,
+            summary: `順利結算 ${args.currentWorkoutType} 日訓練課表。`,
+            snapshot: latestState.lifts_status
+        };
+        appendWorkoutHistory(newRecord);
 
         return { nextDay: nextDay };
     },
