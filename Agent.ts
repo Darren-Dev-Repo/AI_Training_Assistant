@@ -1,12 +1,12 @@
 import { GoogleGenerativeAI, type FunctionDeclaration } from '@google/generative-ai';
 import * as fs from 'fs';
 import * as readline from 'node:readline/promises';
-import { stdin as input, stdout as output } from 'node:process';
 import 'dotenv/config';
 
 import { agentTools } from './AgentToolsDescription.js';
 import { buildSystemPrompt } from './SystemPrompt.js'; 
 import { myTools } from './AgentTrainingTools.js';
+import { sysLog } from './SysLog.js';
 
 // ==========================================
 // 初始化 Gemini API
@@ -95,7 +95,8 @@ async function startAgent() {
                     const toolFunction = myTools[call.name as keyof typeof myTools];
                     
                     if (!toolFunction) {
-                        console.error(`\n[系統錯誤] LLM 試圖呼叫不存在的工具：${call.name}`);
+                        sysLog(`\n[系統錯誤] LLM 試圖呼叫不存在的工具：${call.name}`);
+                        console.log("⚠️ 抱歉，智能教練出了點狀況，請稍後再嘗試！\n");
                         // 如果工具不存在，依然要回傳一個錯誤給 LLM，不然 API 會報錯說「你少回傳了結果」
                         functionResponses.push({
                             functionResponse: {
@@ -119,7 +120,8 @@ async function startAgent() {
                             }
                         });
                     } catch (err) {
-                        console.error(`\n[系統錯誤] 工具 ${call.name} 執行時崩潰！`);
+                        sysLog(`\n[系統錯誤] 工具 ${call.name} 執行時崩潰！`);
+                        console.log("⚠️ 抱歉，智能教練出了點狀況，請稍後再嘗試！\n");
                         functionResponses.push({
                             functionResponse: {
                                 name: call.name,
@@ -143,7 +145,8 @@ async function startAgent() {
             console.log(`\n\n💪🤖 教練：${response.text()}\n`);
 
         } catch (error) {
-            console.error("\n發生錯誤：", error);
+            sysLog(`\n[系統錯誤] 處理使用者輸入時發生異常：\n${String(error)}`);
+            console.log("⚠️ 抱歉，智能教練出了點狀況，請稍後再嘗試！\n");
         }
     }
 
